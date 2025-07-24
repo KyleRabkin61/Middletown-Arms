@@ -14,8 +14,8 @@
 
 .nav-link {
     color: white;
-    font-family: "Kurale", serif;
-    font-size: 35px;
+      font-family: "Red Hat Text", sans-serif;
+    font-size: clamp(20px, 2vw, 35px);
     font-weight: 500;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: black;
@@ -86,7 +86,7 @@
     position: absolute;
     height: 6px;
     width: 100%;
-    background-color: #ffffff;
+    background: red;
     border-radius: 1px;
     opacity: 1;
     left: 0;
@@ -117,37 +117,41 @@
 .navbar-toggler.collapsed .top-bar {
     margin-top: -20px;
     transform: rotate(0deg);
+    background: white;
 }
 
 .navbar-toggler.collapsed .middle-bar {
     opacity: 1;
     filter: alpha(opacity=100);
+    background: white;
 }
 
 .navbar-toggler.collapsed .bottom-bar {
     margin-top: 20px;
     transform: rotate(0deg);
+    background: white;
 }
 
-.textdiv {
+.header {
     background: #5e5e5e;
     border-radius: 70px;
-    height: 400px;
+    height: auto;
     width: clamp(350px, 50vw, 700px);
     opacity: 90%;
     padding: 20px;
     align-items: center;
     margin: 25px;
+    box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
 }
 
-.welcometext {
+.name {
     -webkit-text-stroke-width: 6px;
     -webkit-text-stroke-color: black;
     color: white;
-    font-size: clamp(52px, 6vw, 72px);
-    font-family: "Kurale", serif;
+    font-size: clamp(32px, 6vw, 52px);
+  font-family: "Bevan", serif;
     paint-order: stroke fill;
-    font-weight: 500;
+    font-weight: 100;
     margin: auto 0;
 }
 
@@ -157,8 +161,8 @@
     paint-order: stroke fill;
     color: white;
     font-size: clamp(20px, 2vw, 25px);
-    font-family: "Kalam", cursive;
-    font-weight: 400;
+     font-family: "Red Hat Text", sans-serif;
+    font-weight: 100;
     position: relative;
 }
 
@@ -180,4 +184,22 @@
     opacity: 1;
     object-fit: cover;
     z-index: -1;
+}
+
+.explore {
+    background: red;
+    margin: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 20px 100px;
+    width: 100px;
+    height: clamp(70px, 10svh, 100px);
+    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
+    font-family: "Instrument Sans", sans-serif;
+    color: white !important;
+}
+
+.explore:hover {
+    background: rgb(192, 2, 2) !important;
+    box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
 }
