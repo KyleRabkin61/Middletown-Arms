@@ -7,14 +7,14 @@
 }
 
 .navbar-scrolled {
-    background-color: #18532d;
+    background-color: grey;
     opacity: 98%;
     border-bottom: rgb(0, 0, 0) 5px solid;
 }
 
 .nav-link {
     color: white;
-      font-family: "Red Hat Text", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     font-size: clamp(20px, 2vw, 35px);
     font-weight: 500;
     -webkit-text-stroke-width: 4px;
@@ -26,30 +26,27 @@
 }
 
 .nav-link:hover {
-    color: rgb(0, 0, 0);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: #a40000;
     paint-order: stroke fill;
     transition: .3s;
-    letter-spacing: 1.3px;
 }
 
 .nav-link:active {
-    color: #104121 !important;
-    font-family: "Kurale", serif;
-    font-size: 35px;
     font-weight: 500;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
     paint-order: stroke fill;
     margin-right: 15px;
     transition: .1s;
+    font-family: "Red Hat Text", sans-serif;
+    color: #a40000;
 }
 
 .nav-link:focus {
     color: rgb(255, 255, 255);
     font-family: "Kurale", serif;
-    font-size: 35px;
     font-weight: 500;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: black;
@@ -86,7 +83,7 @@
     position: absolute;
     height: 6px;
     width: 100%;
-    background: red;
+    background: #a40000;
     border-radius: 1px;
     opacity: 1;
     left: 0;
@@ -134,7 +131,7 @@
 
 .header {
     background: #5e5e5e;
-    border-radius: 70px;
+    border-radius: 50px;
     height: auto;
     width: clamp(350px, 50vw, 700px);
     opacity: 90%;
@@ -142,6 +139,8 @@
     align-items: center;
     margin: 25px;
     box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+    position: relative;
+    top: 50px;
 }
 
 .name {
@@ -149,7 +148,7 @@
     -webkit-text-stroke-color: black;
     color: white;
     font-size: clamp(32px, 6vw, 52px);
-  font-family: "Bevan", serif;
+    font-family: "Bevan", serif;
     paint-order: stroke fill;
     font-weight: 100;
     margin: auto 0;
@@ -161,7 +160,7 @@
     paint-order: stroke fill;
     color: white;
     font-size: clamp(20px, 2vw, 25px);
-     font-family: "Red Hat Text", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     font-weight: 100;
     position: relative;
 }
@@ -187,19 +186,52 @@
 }
 
 .explore {
-    background: red;
+    background: #a40000;
     margin: 50px;
     border-radius: 10px;
     font-size: 30px;
     padding: 20px 100px;
-    width: 100px;
-    height: clamp(70px, 10svh, 100px);
-    box-shadow: 0px 1px 4px 3px rgba(0, 0, 0, 0.70);
-    font-family: "Instrument Sans", sans-serif;
+    width: 80px;
+    height: clamp(60px, 10svh, 70px);
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 100;
     color: white !important;
+    transition: 0.5s;
+    border: none !important;
 }
 
 .explore:hover {
-    background: rgb(192, 2, 2) !important;
-    box-shadow: 0px 1px 14px 7px rgba(0, 0, 0, 0.90);
+    background: #a40000 !important;
+    box-shadow: none;
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* about css */
+
+.about {
+    background: #F5F5F5;
+    height: 100svh;
+}
+
+.about .row {
+    margin: 0;
+}
+
+.about-photo,
+.about-description {
+    background-image: url(images/store6.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: clamp(500px, 3vw, 600px);
+    margin: 0;
+    padding: 0;
+}
+
+.about-description {
+    background: red;
 }
