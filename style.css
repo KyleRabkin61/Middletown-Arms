@@ -1,3 +1,13 @@
+/* 
+main title font:  font-family: "Bevan", serif;
+little blurb font:   font-family: "Red Hat Text", sans-serif;
+color red: #a40000
+color grey: #5e5e5e
+*/
+
+
+
+
 .navbar {
     transition: all 0.25s;
 }
@@ -7,7 +17,7 @@
 }
 
 .navbar-scrolled {
-    background-color: grey;
+    background-color: #5e5e5e;
     opacity: 98%;
     border-bottom: rgb(0, 0, 0) 5px solid;
 }
@@ -218,20 +228,56 @@
 
 .about .row {
     margin: 0;
+    padding: 0;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+    overflow: hidden;
+    width: 600px;
 }
 
-.about-photo,
-.about-description {
+
+.about-image {
     background-image: url(images/store6.jpg);
-    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    width: 600px;
     height: 400px;
-    width: clamp(500px, 3vw, 600px);
-    margin: 0;
-    padding: 0;
 }
 
 .about-description {
-    background: red;
+    background: #a40000;
+    width: 600px;
+    height: 400px;
+}
+
+@media screen and (min-width:1200px) {
+    .header {
+        height: 400px;
+    }
+
+    .about .row {
+        width: 1200px;
+        height: 500px;
+    }
+
+    .about-image,
+    .about-description{
+        height: 500px;
+    }
+}
+
+.aboutustitle {
+    font-family: "Bevan", serif;
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
+    color: white;
+    padding-top: 15px;
+ 
+ 
+}
+
+.aboutusblurb {
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
 }
