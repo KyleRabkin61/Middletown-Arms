@@ -248,14 +248,24 @@ color grey: #5e5e5e
     background: #a40000;
 }
 
-@media screen and (min-width:1200px) {
-    .header {
-        height: 400px;
+@media screen and (min-width:992px){
+    .about {
+        height: 90svh;
     }
 
     .about-image,
     .about-description {
         height: 500px;
+    }
+
+    .aboutusblurb {
+        font-size: clamp(14px, 1.5vw, 16.5px) !important;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .header {
+        height: 400px;
     }
 }
 
