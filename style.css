@@ -157,6 +157,7 @@ color grey: #5e5e5e
     opacity: 1;
     object-fit: cover;
     z-index: -1;
+    filter: brightness(0.8);
 }
 
 .header {
@@ -164,7 +165,7 @@ color grey: #5e5e5e
     border-radius: 50px;
     height: auto;
     width: clamp(350px, 50vw, 700px);
-    opacity: 90%;
+    opacity: 95%;
     padding: 20px;
     align-items: center;
     margin: 25px;
@@ -219,16 +220,16 @@ color grey: #5e5e5e
     cursor: pointer;
 }
 
+.row {
+    width: 100%;
+}
+
 /* about css */
 
 .about {
     background: #F5F5F5;
     height: 100svh;
     padding: clamp(50px, 10vw, 200px);
-}
-
-.row {
-    width: 100%;
 }
 
 .about-row {
@@ -248,7 +249,47 @@ color grey: #5e5e5e
     background: #a40000;
 }
 
-@media screen and (min-width:992px){
+.aboutustitle {
+    font-family: "Bevan", serif;
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
+    color: white;
+}
+
+.aboutusblurb {
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    font-size: clamp(13px, 2vw, 20px);
+}
+
+/* owner css */
+
+.owner {
+    background: grey;
+    height: 1600px;
+    padding: clamp(50px, 10vw, 200px);
+}
+
+.owner-title {
+    margin-bottom: 20px;
+}
+
+.owner-photo {
+    background: blue;
+    height: 400px;
+    width: 600px;
+}
+
+.owner-description {
+    background: red;
+    height: 300px;
+    width: 400px;
+    position: relative;
+    bottom: 50px;
+}
+
+@media screen and (min-width:992px) {
     .about {
         height: 90svh;
     }
@@ -260,6 +301,10 @@ color grey: #5e5e5e
 
     .aboutusblurb {
         font-size: clamp(14px, 1.5vw, 16.5px) !important;
+    }
+
+    .owner {
+        height: 90svh;
     }
 }
 
@@ -273,18 +318,8 @@ color grey: #5e5e5e
     .img-header {
         height: 800px;
     }
-}
 
-.aboutustitle {
-    font-family: "Bevan", serif;
-    -webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: black;
-    paint-order: stroke fill;
-    color: white;
-}
-
-.aboutusblurb {
-    font-family: "Red Hat Text", sans-serif;
-    color: white;
-    font-size: clamp(13px, 2vw, 20px);
+    .about {
+        height: 1000px;
+    }
 }
