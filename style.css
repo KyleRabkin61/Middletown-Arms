@@ -234,6 +234,7 @@ color grey: #5e5e5e
 
 .about-row {
     box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+    border-radius: 10px;
 }
 
 .about-image {
@@ -241,12 +242,14 @@ color grey: #5e5e5e
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 400px;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
 }
 
 .about-description {
-    height: 400px;
+    height: 300px;
     background: #a40000;
+    border-radius: 0 0 10px 10px;
 }
 
 .aboutustitle {
@@ -268,25 +271,45 @@ color grey: #5e5e5e
 .owner {
     background: grey;
     height: 1600px;
-    padding: clamp(50px, 10vw, 200px);
+    padding: clamp(10px, 2vw, 100px)
 }
 
 .owner-title {
     margin-bottom: 20px;
+    font-family: "Bevan", serif;
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
+    color: white;
 }
 
 .owner-photo {
-    background: blue;
-    height: 400px;
-    width: 600px;
+    background: url(images/staff1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 350px;
+    width: clamp(500px, 90%, 600px);
+    max-width: 100%;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+    border-radius: 10px;
 }
 
 .owner-description {
-    background: red;
+    background: #a40000;
     height: 300px;
     width: 400px;
     position: relative;
-    bottom: 50px;
+    bottom: 100px;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+    border-radius: 10px;
+}
+
+.descriptonwords {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: clamp(18px, 2vw, 20px);
 }
 
 @media screen and (min-width:992px) {
@@ -294,9 +317,17 @@ color grey: #5e5e5e
         height: 90svh;
     }
 
+    .about-image {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .about-description {
+        border-radius: 0 10px 10px 0;
+    }
+
     .about-image,
     .about-description {
-        height: 500px;
+        height: 400px;
     }
 
     .aboutusblurb {
@@ -304,13 +335,7 @@ color grey: #5e5e5e
     }
 
     .owner {
-        height: 90svh;
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .header {
-        height: 400px;
+        height: 100svh;
     }
 }
 
@@ -323,3 +348,38 @@ color grey: #5e5e5e
         height: 1000px;
     }
 }
+.ownerbold{
+    font-weight: 900;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #a40000; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    font-family: "Rasa", serif;
+    transition: 0.3s;
+    border: solid, 1px, #f1ebe3;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
+
+  }
+  
+  #myBtn:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+    background-color: #6c0000;
+	 
+
+  }
+  #myBtn:active{
+    transform: scale(0.9);
+  }
