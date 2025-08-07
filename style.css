@@ -226,7 +226,7 @@ color grey: #5e5e5e
 
 .about {
     background: #F5F5F5;
-    height: 100svh;
+    height: 90svh;
     padding: clamp(50px, 10vw, 200px);
 }
 
@@ -306,7 +306,7 @@ color grey: #5e5e5e
 .owner-description {
     background: #a40000;
     height: 350px;
-    width: 400px;
+    width: clamp(300px, 80%, 400px);
     position: relative;
     bottom: 100px;
     box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
@@ -323,9 +323,10 @@ color grey: #5e5e5e
 /* service css */
 
 .service {
-    height: 90svh;
+    height: auto;
     background: rgb(61, 61, 61);
     color: white;
+    padding: 50px 0;
 }
 
 .the-service {
@@ -339,10 +340,6 @@ color grey: #5e5e5e
 }
 
 @media screen and (min-width:992px) {
-    .about {
-        height: 90svh;
-    }
-
     .about-image {
         border-radius: 10px 0 0 10px;
     }
@@ -362,6 +359,15 @@ color grey: #5e5e5e
 
     .owner {
         height: 100svh;
+    }
+
+    .service {
+        height: 90svh;
+    }
+
+    .service-img {
+        width: clamp(400px, 30vw, 450px);
+        height: clamp(400px, 30vw, 450px);
     }
 }
 
