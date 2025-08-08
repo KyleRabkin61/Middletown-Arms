@@ -22,6 +22,9 @@
     <!-- CSS link -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Swiper link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -60,7 +63,7 @@
                         <button class="nav-link" onclick="scrollToSection('service')">Services</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" onclick="scrollToSection('owner')">Popular Products</button>
+                        <button class="nav-link" onclick="scrollToSection('products')">Popular Products</button>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" onclick="scrollToSection('owner')">Gallery</button>
@@ -77,6 +80,8 @@
         </div>
     </nav>
     <div class="container-fluid p-0">
+
+        <!-- Header -->
         <div class="img-header align-items-center" id="vue_app">
             <img src="images/inside-store4.jpeg" alt="" class="the-image">
             <div class="row d-flex justify-content-center align-items-center flex-column">
@@ -180,6 +185,71 @@
                 </div>
             </div>
         </div>
+
+        <!-- Products Section -->
+        <div class="products" id="products">
+            <h1 class="product-title text-center">Popular Products Sold</h1>
+            <div class="card-swiper-container">
+                <div class="wrap swiper">
+                    <div class="slider-wrapper">
+                        <div class="card-list swiper-wrapper">
+                            <div class="card-item swiper-slide ">
+                                <img src="https://picsum.photos/200" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                            <div class="card-item swiper-slide">
+                                <img src="https://picsum.photos/300" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                            <div class="card-item swiper-slide">
+                                <img src="https://picsum.photos/400" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                            <div class="card-item swiper-slide">
+                                <img src="https://picsum.photos/500" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                            <div class="card-item swiper-slide">
+                                <img src="https://picsum.photos/600" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                            <div class="card-item swiper-slide">
+                                <img src="https://picsum.photos/700" alt="" class="product-image">
+                                <h2 class="product-name">lorem</h2>
+                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Vitae
+                                    quasi in
+                                    soluta qui earum architecto.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <button onclick="topFunction()" id="backToTop" class="back-to-top" title="Go to top"><img width="32" height="32"
@@ -199,7 +269,10 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
-    <!-- js link -->
+    <!-- Swiper JS link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript link -->
     <script src="script.js"></script>
 </body>
 
