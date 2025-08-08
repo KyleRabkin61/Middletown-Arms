@@ -79,7 +79,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" id="vue_app">
 
         <!-- Header -->
         <div class="img-header align-items-center" id="vue_app">
@@ -193,53 +193,10 @@
                 <div class="wrap swiper">
                     <div class="slider-wrapper">
                         <div class="card-list swiper-wrapper">
-                            <div class="card-item swiper-slide ">
-                                <img src="https://picsum.photos/200" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
-                            </div>
-                            <div class="card-item swiper-slide">
-                                <img src="https://picsum.photos/300" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
-                            </div>
-                            <div class="card-item swiper-slide">
-                                <img src="https://picsum.photos/400" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
-                            </div>
-                            <div class="card-item swiper-slide">
-                                <img src="https://picsum.photos/500" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
-                            </div>
-                            <div class="card-item swiper-slide">
-                                <img src="https://picsum.photos/600" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
-                            </div>
-                            <div class="card-item swiper-slide">
-                                <img src="https://picsum.photos/700" alt="" class="product-image">
-                                <h2 class="product-name">lorem</h2>
-                                <p class="user-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Vitae
-                                    quasi in
-                                    soluta qui earum architecto.</p>
+                            <div class="card-item swiper-slide" v-for="product in products" :key="products.id">
+                                <img v-bind:src="product.img" alt="" class="product-image">
+                                <h2 class="product-name">{{ product.name }}</h2>
+                                <p class="user-description">{{ product.description }}</p>
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>

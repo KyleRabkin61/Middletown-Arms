@@ -1,4 +1,51 @@
-// vue_app.mount("#vue_app");
+const vue_app = Vue.createApp({
+  data() {
+    return {
+      products: []
+    };
+  },
+  created() {
+    fetch('products.json')
+      .then(response => response.json())
+      .then(json => {
+        this.products = json;
+      })
+      .then(() => {
+        
+        // Swiper js
+        this.$nextTick(() => {
+          new Swiper('.slider-wrapper', {
+            loop: true,
+            grabCursor: true,
+            spaceBetween: 30,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+              dynamicBullets: true
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1
+              },
+              768: {
+                slidesPerView: 2
+              },
+              1200: {
+                slidesPerView: 3
+              },
+            }
+          });
+        });
+      })
+      .catch(error => console.error("Error fetching data:", error));
+  }
+});
+
+vue_app.mount("#vue_app");
 
 let imgHeader = document.querySelector(".img-header");
 let height = parseInt(getComputedStyle(imgHeader).height, 10);
@@ -67,36 +114,3 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-// Swiper js
-
-const swiper = new Swiper('.slider-wrapper', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 30,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1200: {
-            slidesPerView: 3
-        },
-    }
-});
