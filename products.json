@@ -1,31 +1,41 @@
 [
     {
-        "name": "loremm",
+        "name": "Smith & Wesson CSX",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/200"
     },
     {
-        "name": "lorem",
+        "name": "HK CC9",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/300"
     },
     {
-        "name": "lorem",
+        "name": "Glock 19 COA",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/400"
     },
     {
-        "name": "lorem",
+        "name": "PSA Dagger Comp",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/500"
     },
     {
-        "name": "lorem",
+        "name": "Springfield Emissary",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/600"
     },
     {
-        "name": "loremmm",
+        "name": "Ruger RMX",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
+        "img": "https://picsum.photos/700"
+    },
+      {
+        "name": "Canik TTI Combat",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
+        "img": "https://picsum.photos/700"
+    },
+        {
+        "name": "Smith & Wesson FPC",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
         "img": "https://picsum.photos/700"
     }

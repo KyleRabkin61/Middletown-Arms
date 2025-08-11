@@ -66,9 +66,6 @@
                         <button class="nav-link" onclick="scrollToSection('products')">Popular Products</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" onclick="scrollToSection('owner')">Gallery</button>
-                    </li>
-                    <li class="nav-item">
                         <button class="nav-link" onclick="scrollToSection('owner')">Contact</button>
                     </li>
                     <li class="nav-item">
@@ -113,7 +110,7 @@
         </div>
 
         <!-- Owners Section -->
-        <div class="owner d-flex justify-content-evenly align-items-center flex-column" id="owner">
+        <div class="owner d-flex justify-content-center align-items-center flex-column" id="owner">
             <h1 class="owner-title">Meet the Owners</h1>
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
@@ -156,26 +153,27 @@
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-lg-6 service-list">
                     <div class="the-service">
-                        <h2>First Service</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore, unde dolorem at
-                            exercitationem quae porro totam natus perferendis fugiat, architecto voluptate sit facere
-                            officia.</p>
+                        <h2 class="nameof-service">Gunsmithing</h2>
+                        <p class="service-description"> We provide precision fitting, part replacement, performance tuning, and custom modifications to keep your firearms safe, reliable, and tailored to your needs.</p>
                         <hr>
                     </div>
 
                     <div class="the-service">
-                        <h2>Second Service</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore, unde dolorem at
-                            exercitationem quae porro totam natus perferendis fugiat, architecto voluptate sit facere
-                            officia.</p>
+                        <h2 class="nameof-service">Conceal Carry Licensing</h2>
+                        <p class="service-description">We provide full concealed carry permit services for New Jersey and New York, including training, qualification, and assistance with the application process.</p>
                         <hr>
                     </div>
 
                     <div class="the-service">
-                        <h2>Third Service</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolore, unde dolorem at
-                            exercitationem quae porro totam natus perferendis fugiat, architecto voluptate sit facere
-                            officia.</p>
+                        <h2 class="nameof-service">Tranfers</h2>
+                        <p class="service-description">We handle firearm transfers quickly and securely, ensuring all federal and state regulations are met for a smooth, compliant process.</p>
+                        <hr>
+                    </div>
+
+
+                    <div class="the-service">
+                        <h2 class="nameof-service">Custom Orders</h2>
+                        <p class="service-description">Did not find the product you were looking for in-store? Our team is happy to discuss custom orders to get you exactly what you need.</p>
                         <hr>
                     </div>
 
@@ -188,12 +186,12 @@
 
         <!-- Products Section -->
         <div class="products" id="products">
-            <h1 class="product-title text-center">Popular Products Sold</h1>
+            <h1 class="product-title text-center">Products Sold</h1>
             <div class="card-swiper-container">
                 <div class="wrap swiper">
                     <div class="slider-wrapper">
                         <div class="card-list swiper-wrapper">
-                            <div class="card-item swiper-slide" v-for="product in products" :key="products.id">
+                            <div class="card-item swiper-slide " v-for="product in products" :key="products.id">
                                 <img v-bind:src="product.img" alt="" class="product-image">
                                 <h2 class="product-name">{{ product.name }}</h2>
                                 <p class="user-description">{{ product.description }}</p>
