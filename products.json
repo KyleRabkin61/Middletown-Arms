@@ -1,42 +1,42 @@
 [
     {
         "name": "Smith & Wesson CSX",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/200"
+        "description": "A compact, metal-framed 9mm pistol combining classic 1911-style features with modern ergonomics, designed for concealed carry and reliability.",
+        "img": "gun-images/IMG_6711.jpg"
     },
     {
         "name": "HK CC9",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/300"
+        "description": "A micro-compact, double-stack 9mm pistol from Heckler & Koch, built for concealed carry with optics-ready capability, ambidextrous controls, and rugged NATO-tested durability.",
+        "img": "gun-images/IMG_6713.jpg"
     },
     {
-        "name": "Glock 19 COA",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/400"
+        "name": "Canik TTI Combat",
+        "description": "A full-size 9mm pistol built with Taran Tactical Innovations, featuring a compensator, flat-faced trigger, optic-ready slide, and enhanced ergonomics for performance shooting.",
+        "img": "gun-images/IMG_6721.JPEG"
     },
     {
-        "name": "PSA Dagger Comp",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/500"
+        "name": "Smith & Wesson FPC",
+        "description": "A folding 9mm pistol-caliber rifle designed for compact carry, using pistol magazines, with optics and suppressor-ready features.",
+        "img": "gun-images/IMG_6723.jpg"
     },
     {
-        "name": "Springfield Emissary",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/600"
+        "name": "Zastava M70 ZPAP",
+        "description": "A durable 39mm semi-auto rifle with an AK-style design, known for reliability and military heritage.",
+        "img": "gun-images/IMG_6724.jpg"
     },
     {
-        "name": "Ruger RMX",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/700"
+        "name": "Rock Island VR80",
+        "description": "A 12-gauge semi-auto shotgun with AR-style design, 20 inch barrel, and durable burnt bronze finish.",
+        "img": "gun-images/IMG_6726.jpg"
     },
       {
-        "name": "Canik TTI Combat",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/700"
+        "name": "Beretta 92XI",
+        "description": "A modern 9mm pistol with single-action trigger, 18+1 capacity, optics-ready, and Vertec-style grip.",
+        "img": "gun-images/IMG_6733.jpg"
     },
         {
-        "name": "Smith & Wesson FPC",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi in soluta qui earum architecto.",
-        "img": "https://picsum.photos/700"
+        "name": "POF Phoenix",
+        "description": "A compact 9mm AR-style pistol with an 8.5 inch barrel, 35-round mag, and ambidextrous controls.",
+        "img": "gun-images/IMG_6735.jpg"
     }
 ]
