@@ -5,8 +5,7 @@ color red: #a40000
 color grey: #5e5e5e
 */
 
-
-
+/* navbar css*/
 
 .navbar {
     transition: all 0.25s;
@@ -56,7 +55,6 @@ color grey: #5e5e5e
 
 .nav-link:focus {
     color: rgb(255, 255, 255);
-    font-family: "Kurale", serif;
     font-weight: 500;
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: black;
@@ -138,6 +136,8 @@ color grey: #5e5e5e
     transform: rotate(0deg);
     background: white;
 }
+
+/* header css */
 
 .img-header {
     display: grid;
@@ -289,6 +289,10 @@ color grey: #5e5e5e
     border-radius: 10px;
 }
 
+.ownerbold {
+    font-weight: 900;
+}
+
 .amanda {
     background: url(images/amanda.jpg);
     background-size: cover;
@@ -370,9 +374,7 @@ color grey: #5e5e5e
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers child elements horizontally */
     justify-content: center;
-    /* Optional: vertically centers title + swiper together */
     text-align: center;
 }
 
@@ -416,7 +418,6 @@ color grey: #5e5e5e
     justify-content: center;
     flex-direction: column;
     border-radius: 8px;
-    backdrop-filter: blur(30px);
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid black;
 }
@@ -456,9 +457,24 @@ color grey: #5e5e5e
     color: #a40000;
 }
 
-@media (max-width: 766px) {
+/* products @media css */
+
+@media (max-width: 768px) {
+    .products {
+        padding: 30px 20px;
+    }
+
     .slider-wrapper {
-        margin: 0 10px 40px;
+        max-width: 100%;
+        margin: 0 auto 40px;
+    }
+
+    .card-item {
+        width: 90%;
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
     }
 
     .slider-wrapper .swiper-button-prev,
@@ -472,7 +488,7 @@ color grey: #5e5e5e
 .contact {
     background: grey;
     height: auto;
-    padding: 150px 0;
+    padding: 50px 0;
 }
 
 .contact-title {
@@ -525,7 +541,7 @@ form {
 
 .contact-form-title {
     color: white;
-    font-family: "Playfair Display", serif;
+    font-family: "Red Hat Text", sans-serif;
     font-weight: 600;
     font-size: 1.7rem;
     line-height: 1;
@@ -571,7 +587,7 @@ textarea.input {
     pointer-events: none;
     z-index: 1000;
     transition: 0.5s;
-    font-family: "Ancizar Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .input-container.textarea label {
@@ -591,7 +607,7 @@ textarea.input {
     cursor: pointer;
     transition: 0.3s;
     margin: 0;
-    font-family: "Ancizar Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .contact-btn:hover {
@@ -619,7 +635,7 @@ textarea.input {
     opacity: 0;
     transition: 0.3s;
     height: 5px;
-    background: #333333;
+    background: #a40000;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -637,7 +653,7 @@ textarea.input {
     transform: translateY(-50%);
     left: 25px;
     font-size: 0.8rem;
-    font-family: "Ancizar Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .input-container.focus span:before,
@@ -656,13 +672,13 @@ textarea.input {
 .contact-info .title {
     color: #1F2020;
     font-weight: 600;
-    font-family: "Playfair Display", serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .text {
     color: #1F2020;
     margin: 1.5rem 0 2rem 0;
-    font-family: "Ancizar Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .information {
@@ -671,7 +687,7 @@ textarea.input {
     margin: 0.7rem 0;
     align-items: center;
     font-size: 0.95rem;
-    font-family: "Ancizar Sans", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
 }
 
 .social-media {
@@ -691,7 +707,7 @@ textarea.input {
     width: 35px;
     height: 35px;
     border-radius: 5px;
-    background: linear-gradient(45deg, #333333, #1F2020);
+    background: #1F2020;
     line-height: 35px;
     text-align: center;
     color: white;
@@ -706,6 +722,8 @@ textarea.input {
 .social-icons a:hover {
     scale: 1.05;
 }
+
+/* contact @media css */
 
 @media (max-width: 992px) {
     .contact-container {
@@ -774,6 +792,8 @@ textarea.input {
     }
 }
 
+/* other @media css */
+
 @media screen and (min-width:992px) {
     .about-image {
         border-radius: 10px 0 0 10px;
@@ -796,17 +816,15 @@ textarea.input {
         height: 100svh;
     }
 
-    .service {
+    .service,
+    .products,
+    .contact {
         height: 90svh;
     }
 
     .service-img {
         width: clamp(400px, 30vw, 450px);
         height: clamp(400px, 30vw, 450px);
-    }
-
-    .products {
-        height: 90svh;
     }
 }
 
@@ -838,9 +856,7 @@ textarea.input {
     }
 }
 
-.ownerbold {
-    font-weight: 900;
-}
+/* back to top css */
 
 .back-to-top {
     font-family: "Fira Sans", sans-serif;
