@@ -206,16 +206,16 @@ color grey: #5e5e5e
     font-family: "Red Hat Text", sans-serif;
     font-weight: 100;
     color: white !important;
-    transition: 0.5s;
+    transition: 0.25s;
     border: none !important;
 }
 
 .explore:hover {
-    background: #a40000 !important;
-    box-shadow: none;
+    background: #6c0000 !important;
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: 0.25s;
     cursor: pointer;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
 }
 
 .row {
@@ -528,7 +528,7 @@ color grey: #5e5e5e
 }
 
 .contact-form {
-    background: #a40000;
+    background: #1F2020;
     position: relative;
 }
 
@@ -588,6 +588,7 @@ textarea.input {
     z-index: 1000;
     transition: 0.5s;
     font-family: "Red Hat Text", sans-serif;
+    
 }
 
 .input-container.textarea label {
@@ -597,22 +598,23 @@ textarea.input {
 
 .contact-btn {
     padding: 0.6rem 1.3rem;
-    background: white;
-    border: 2px solid #D9D9D9;
+    background: #a40000;
+    border: none;
     font-size: 0.95rem;
-    color: #1F2020;
+    color: white;
     line-height: 1;
-    border-radius: 25px;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
     margin: 0;
     font-family: "Red Hat Text", sans-serif;
+    box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
 }
 
 .contact-btn:hover {
-    background: transparent;
-    color: white;
+    transform: scale(1.2);
+    background-color: #6c0000;
 }
 
 .input-container span {
@@ -635,7 +637,7 @@ textarea.input {
     opacity: 0;
     transition: 0.3s;
     height: 5px;
-    background: #a40000;
+    background: #1F2020;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -651,14 +653,16 @@ textarea.input {
 .input-container.focus label {
     top: 0;
     transform: translateY(-50%);
-    left: 25px;
-    font-size: 0.8rem;
+    left: 20px;
+    font-size: 0.90rem;
     font-family: "Red Hat Text", sans-serif;
+    color: #d02323;
+    font-weight: 900;
 }
 
 .input-container.focus span:before,
 .input-container.focus span:after {
-    width: 50%;
+    width: 60%;
     opacity: 1;
 }
 
@@ -679,6 +683,7 @@ textarea.input {
     color: #1F2020;
     margin: 1.5rem 0 2rem 0;
     font-family: "Red Hat Text", sans-serif;
+    font-weight: 200;
 }
 
 .information {
@@ -688,6 +693,7 @@ textarea.input {
     align-items: center;
     font-size: 0.95rem;
     font-family: "Red Hat Text", sans-serif;
+    
 }
 
 .social-media {
@@ -707,12 +713,13 @@ textarea.input {
     width: 35px;
     height: 35px;
     border-radius: 5px;
-    background: #1F2020;
+    background: #a40000;
     line-height: 35px;
     text-align: center;
     color: white;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     transition: .3s;
+    box-shadow: #000000 0px 2px 4px 0px, #000000 2px 2px 8px 0px;
 }
 
 .bx {
@@ -720,7 +727,11 @@ textarea.input {
 }
 
 .social-icons a:hover {
-    scale: 1.05;
+    transform: scale(1.2);
+    background-color: #6c0000;
+}
+.contactinfo{
+    font-weight: 600;
 }
 
 /* contact @media css */
@@ -869,7 +880,6 @@ textarea.input {
     outline: none;
     background: #a40000;
     color: white;
-    border: solid 1px #f1ebe3;
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
