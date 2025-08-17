@@ -176,8 +176,8 @@ color grey: #5e5e5e
     -webkit-text-stroke-width: 6px;
     -webkit-text-stroke-color: black;
     color: white;
-    font-size: clamp(32px, 6vw, 52px);
     font-family: "Bevan", serif;
+    font-size: clamp(32px, 6vw, 52px);
     paint-order: stroke fill;
     font-weight: 100;
     margin: auto 0;
@@ -588,7 +588,7 @@ textarea.input {
     z-index: 1000;
     transition: 0.5s;
     font-family: "Red Hat Text", sans-serif;
-    
+
 }
 
 .input-container.textarea label {
@@ -693,7 +693,7 @@ textarea.input {
     align-items: center;
     font-size: 0.95rem;
     font-family: "Red Hat Text", sans-serif;
-    
+
 }
 
 .social-media {
@@ -730,7 +730,8 @@ textarea.input {
     transform: scale(1.2);
     background-color: #6c0000;
 }
-.contactinfo{
+
+.contactinfo {
     font-weight: 600;
 }
 
@@ -800,6 +801,79 @@ textarea.input {
 
     .contact-btn {
         padding: 0.45rem 1.2rem;
+    }
+}
+
+/* footer css */
+
+footer {
+    background-color: rgb(61, 61, 61);
+    color: #fff;
+    padding: 50px 50px;
+}
+
+.footer-row {
+    margin-top: 50px;
+}
+
+.footer-text {
+    font-size: clamp(13px, 2vw, 17px);
+       font-family: "Red Hat Text", sans-serif;
+    font-weight: 400 !important;
+}
+
+.footer-header {
+    margin-bottom: 20px;
+    font-family: "Bevan", serif;
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
+    color: white;
+    font-size: clamp(25px, 2vw, 45px);
+}
+
+
+
+.website,
+.place,
+.email,
+.facebook,
+.instagram,
+.phone {
+    font-size: clamp(20px, 2vw, 150px) !important;
+  
+}
+
+.footer-img {
+    width: 225px;
+    height: 200px;
+}
+
+footer hr {
+    border: solid #5e5e5e 1px;
+    margin-top: 4;
+    opacity: 100%;
+    width: auto;
+    margin: 50px clamp(50px, 10vw, 300px);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bottom-text {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 300;
+    margin-top: 50px;
+    font-size: 20px;
+    color: #5e5e5e;
+}
+
+/* footer @media css */ 
+
+
+@media screen and (min-width: 992px) {
+    .footer-img {
+        width: 375px !important;
+        height: 350px !important;
     }
 }
 
