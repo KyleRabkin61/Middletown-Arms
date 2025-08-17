@@ -812,6 +812,20 @@ footer {
     padding: 50px 50px;
 }
 
+.google-widget-wrapper {
+    padding: 20px;
+}
+
+.footer-link {
+    color: white;
+    transition: 0.25s;
+}
+
+.footer-link:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
 .footer-row {
     margin:50px auto 0 auto;
 }
@@ -966,7 +980,6 @@ footer hr {
     font-family: "Rasa", serif;
     box-shadow: #000000 0px 4px 8px 0px, #000000 4px 4px 16px 0px;
     transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
-    /* Add transform here */
 }
 
 .back-to-top:hover {

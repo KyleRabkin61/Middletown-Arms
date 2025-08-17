@@ -126,7 +126,7 @@ function focusFunc() {
 
 function blurFunc() {
     let parent = this.parentNode;
-    if (this.value == "") {
+    if (this.value.trim() === "") {
         parent.classList.remove("focus");
     }
 }
@@ -134,25 +134,31 @@ function blurFunc() {
 inputs.forEach(input => {
     input.addEventListener("focus", focusFunc);
     input.addEventListener("blur", blurFunc);
-})
+});
 
-window.onload = function () {
-    document.getElementsByClassName('input-container').textContent = ''
-};
+// Reset form on page load
+window.addEventListener("load", () => {
+    const form = document.getElementById("contactForm");
+    if (form) form.reset();
+});
 
+// Handle form submission
 function handleSubmit(event) {
     event.preventDefault();
 
-    const form = document.getElementById("contactForm");
+    const form = event.target;
     const formData = new FormData(form);
 
+    // Validate only visible fields (ignore hidden ones)
     for (let [name, value] of formData.entries()) {
-        if (value.trim() === "") {
+        const field = form.querySelector(`[name="${name}"]`);
+        if (field && field.type !== "hidden" && value.trim() === "") {
             alert("Please fill out all fields in order for your message to be sent.");
             return;
         }
     }
 
+    // Submit form
     fetch(form.action, {
         method: "POST",
         body: formData
@@ -170,3 +176,12 @@ function handleSubmit(event) {
             alert("There was a problem sending your message.");
         });
 }
+
+// Attach submit listener
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (form) {
+        form.addEventListener("submit", handleSubmit);
+    }
+});
+

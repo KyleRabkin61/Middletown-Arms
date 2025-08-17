@@ -253,33 +253,34 @@
                     </div>
 
                     <div class="contact-form">
-                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST"
-                            onsubmit="handleSubmit(event)">
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                             <h3 class="contact-form-title">Send a Message</h3>
+
+                            <!-- Hidden Access Key -->
+                            <input type="hidden" name="access_key" value="a997b6f3-72dc-4399-847f-4b4005406c00">
+
                             <div class="input-container">
-                                <input type="hidden" name="access_key" value="aa22d3b7-4e4d-4aca-8bdf-001fb86ad749">
-                                <input type="text" name="name" class="input">
-                                <label for="">Name</label>
+                                <input type="text" id="name" name="name" class="input">
+                                <label for="name">Name</label>
                                 <span>Name</span>
                             </div>
+
                             <div class="input-container">
-                                <input type="email" name="email" class="input">
-                                <label for="">Email</label>
+                                <input type="email" id="email" name="email" class="input">
+                                <label for="email">Email</label>
                                 <span>Email</span>
                             </div>
-                            <div class="input-container">
-                                <input type="tel" name="phone" class="input">
-                                <label for="">Phone</label>
-                                <span>Phone</span>
-                            </div>
+
                             <div class="input-container textarea">
-                                <textarea name="message" class="input"></textarea>
-                                <label for="">Message</label>
+                                <textarea id="message" name="message" class="input"></textarea>
+                                <label for="message">Message</label>
                                 <span>Message</span>
                             </div>
+
                             <input type="submit" value="Send" class="contact-btn">
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -289,10 +290,12 @@
             src="https://img.icons8.com/ios-filled/32/FFFFFF/long-arrow-up.png" alt="long-arrow-up" /></button>
 
 
-    <footer  id="reviews" class="text-white container-fluid d-flex justify-content-center flex-column">
-        <div class="review-widget_net" data-uuid="9fa6f919-685c-4b0d-b3c5-cf781829a987" data-template="10"
-            data-lang="en" data-theme="light"></div>
-        <script src="https://grwapi.net/widget.min.js"></script>
+    <footer id="reviews" class="text-white container-fluid d-flex justify-content-center flex-column">
+        <div class="google-widget-wrapper">
+            <div class="review-widget_net" data-uuid="9fa87963-6ef0-4b14-9cc7-ece21b6a4461" data-template="14"
+                data-lang="en" data-theme="light" data-filter="5"></div>
+            <script src="https://grwapi.net/widget.min.js"></script>
+        </div>
         <hr>
         </hr>
         <div class="footer-row row d-flex justify-content-center text-center">
@@ -315,7 +318,9 @@
 
                 <div class="phone d-flex justify-content-center align-items-start mb-2">
                     <i class='bx bxs-phone me-2 address-icon'></i>
-                    <p class="footer-text mb-2 text-center">(732)-612-8345</p>
+                    <a href="tel:7326128345" class="footer-link">
+                        <p class="footer-text mb-2 text-center">(732)-612-8345</p>
+                    </a>
                 </div>
 
                 <div class="email d-flex justify-content-center align-items-start mb-2">
@@ -335,8 +340,13 @@
 
                 <div class="place d-flex justify-content-center align-items-start text-center">
                     <i class='bx bxs-map address-icon me-2'></i>
-                    <p class="footer-text mb-0">429 NJ-36 Unit 4, <br> Port Monmouth, NJ 07758</p>
+                    <a href="https://www.google.com/maps/dir//429+NJ-36+Unit+4,+Port+Monmouth,+NJ+07758/@40.4241074,-74.1818558,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c237239eb98ffd:0x13c21f3abe6e84eb!2m2!1d-74.0994549!2d40.4241366?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" class="footer-link">
+                        <p class="footer-text mb-0">429 NJ-36 Unit 4, <br> Port Monmouth,<br>NJ 07758 <br> (click for
+                            directions)</p>
+                    </a>
                 </div>
+
             </div>
             <img src="images/edited-logo.png" alt="" class="footer-img col-6 col-lg-4 order-lg-2">
         </div>
