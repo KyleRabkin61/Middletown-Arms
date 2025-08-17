@@ -12,7 +12,7 @@ color grey: #5e5e5e
 }
 
 .navbar-brand img {
-    height: clamp(120px, 11vw, 140px);
+    height: clamp(100px, 11vw, 140px);
 }
 
 .navbar-scrolled {
@@ -309,7 +309,7 @@ color grey: #5e5e5e
 
 .owner-description {
     background: #a40000;
-    height: 350px;
+    height: 375px;
     width: clamp(300px, 80%, 400px);
     position: relative;
     bottom: 100px;
@@ -813,7 +813,7 @@ footer {
 }
 
 .footer-row {
-    margin-top: 50px;
+    margin:50px auto 0 auto;
 }
 
 .footer-text {
@@ -840,8 +840,13 @@ footer {
 .facebook,
 .instagram,
 .phone {
-    font-size: clamp(20px, 2vw, 150px) !important;
-  
+    font-size: clamp(20px, 2vw, 150px);
+}
+
+.bx {
+    font-size: clamp(15px, 1vw, 20px);
+    position: relative;
+    top: 3px;
 }
 
 .footer-img {
@@ -927,7 +932,7 @@ footer hr {
 
 @media screen and (max-height:800px) {
     .img-header {
-        height: 800px;
+        height: 750px;
     }
 
     .owner {
