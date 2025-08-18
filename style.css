@@ -860,7 +860,7 @@ footer {
 }
 
 .grw-net-comment {
-    height: 135px !important; /* or whatever the default height should be */
+    height: 135px !important;
     overflow: hidden;
     transition: height 0.3s;
 }
