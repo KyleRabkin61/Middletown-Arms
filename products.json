@@ -38,5 +38,10 @@
         "name": "POF Phoenix",
         "description": "A compact 9mm AR-style pistol with an 8.5 inch barrel, 35-round mag, and ambidextrous controls.",
         "img": "gun-images/IMG_6735.jpg"
+    },
+            {
+        "name": "Hex",
+        "description": "type",
+        "img": "gun-images/IMG_6922.jpeg"
     }
 ]

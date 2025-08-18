@@ -1,51 +1,74 @@
+// pop up function
+
+// function popUp() {
+//     let popUp = prompt(
+//         'This website requires the user to be at least 18 years old. Do you satisfy this requirement? (Please type Yes or No in the box provided)'
+//     );
+
+//     while (!popUp || (popUp.toLowerCase() !== 'yes' && popUp.toLowerCase() !== 'no')) {
+//         popUp = prompt('The response you entered is not valid. Please type either Yes or No.');
+//     }
+
+//     if (popUp.toLowerCase() === 'no') {
+//         alert('You do not meet the age requirement to access this website.');
+//         location.reload();
+//     }
+// }
+
+// popUp()
+
+// vue
+
 const vue_app = Vue.createApp({
-  data() {
-    return {
-      products: []
-    };
-  },
-  created() {
-    fetch('products.json')
-      .then(response => response.json())
-      .then(json => {
-        this.products = json;
-      })
-      .then(() => {
-        
-        // Swiper js
-        this.$nextTick(() => {
-          new Swiper('.slider-wrapper', {
-            loop: true,
-            grabCursor: true,
-            spaceBetween: 30,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-              dynamicBullets: true
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-              0: {
-                slidesPerView: 1
-              },
-              768: {
-                slidesPerView: 2
-              },
-              1200: {
-                slidesPerView: 3
-              },
-            }
-          });
-        });
-      })
-      .catch(error => console.error("Error fetching data:", error));
-  }
+    data() {
+        return {
+            products: []
+        };
+    },
+    created() {
+        fetch('products.json')
+            .then(response => response.json())
+            .then(json => {
+                this.products = json;
+            })
+            .then(() => {
+
+                // Swiper js
+                this.$nextTick(() => {
+                    new Swiper('.slider-wrapper', {
+                        loop: true,
+                        grabCursor: true,
+                        spaceBetween: 30,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                            dynamicBullets: true
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1
+                            },
+                            768: {
+                                slidesPerView: 2
+                            },
+                            1200: {
+                                slidesPerView: 3
+                            },
+                        }
+                    });
+                });
+            })
+            .catch(error => console.error("Error fetching data:", error));
+    }
 });
 
 vue_app.mount("#vue_app");
+
+// header / navbar js
 
 let imgHeader = document.querySelector(".img-header");
 let height = parseInt(getComputedStyle(imgHeader).height, 10);
@@ -184,4 +207,5 @@ document.addEventListener("DOMContentLoaded", () => {
         form.addEventListener("submit", handleSubmit);
     }
 });
+
 
