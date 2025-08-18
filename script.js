@@ -26,7 +26,7 @@ const vue_app = Vue.createApp({
         };
     },
     created() {
-        fetch('products.JSon')
+        fetch('products.json')
             .then(response => response.json())
             .then(json => {
                 this.products = json;
