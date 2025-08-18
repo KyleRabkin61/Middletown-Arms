@@ -5,7 +5,7 @@ color red: #a40000
 color grey: #5e5e5e
 */
 
-/* navbar css*/
+/* Navbar CSS */
 
 .navbar {
     transition: all 0.25s;
@@ -63,7 +63,7 @@ color grey: #5e5e5e
     transition: .3s;
 }
 
-/*hamburger menu css*/
+/* Hanburger Menu CSS */
 
 .navbar-toggler {
     width: 50px;
@@ -137,7 +137,7 @@ color grey: #5e5e5e
     background: white;
 }
 
-/* header css */
+/* Header CSS */
 
 .img-header {
     display: grid;
@@ -222,7 +222,7 @@ color grey: #5e5e5e
     width: 100%;
 }
 
-/* about css */
+/* About CSS */
 
 .about {
     background: #F5F5F5;
@@ -264,7 +264,7 @@ color grey: #5e5e5e
     font-size: clamp(13px, 2vw, 20px);
 }
 
-/* owner css */
+/* Owner CSS */
 
 .owner {
     background: grey;
@@ -317,6 +317,15 @@ color grey: #5e5e5e
     border-radius: 10px;
 }
 
+.descriptonwords {
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: clamp(18px, 2vw, 20px);
+}
+
+/*  Owner @media CSS */
+
 @media screen and (min-width: 2200px) {
     .owner-photo {
         width: clamp(700px, 75%, 1000px);
@@ -328,14 +337,7 @@ color grey: #5e5e5e
     }
 }
 
-.descriptonwords {
-    font-family: "Red Hat Text", sans-serif;
-    font-weight: 300;
-    color: white;
-    font-size: clamp(18px, 2vw, 20px);
-}
-
-/* service css */
+/* Service CSS */
 
 .service {
     height: auto;
@@ -376,7 +378,7 @@ color grey: #5e5e5e
 }
 
 
-/* products css */
+/* Products CSS */
 
 .products {
     height: auto;
@@ -468,7 +470,7 @@ color grey: #5e5e5e
     color: #a40000;
 }
 
-/* products @media css */
+/* Products @media CSS */
 
 @media (max-width: 768px) {
     .products {
@@ -494,7 +496,7 @@ color grey: #5e5e5e
     }
 }
 
-/* contact css */
+/* Contact CSS */
 
 .contact {
     background: grey;
@@ -520,6 +522,8 @@ color grey: #5e5e5e
     align-items: center;
     justify-content: center;
 }
+
+/* Form CSS */
 
 .form {
     width: 90vw;
@@ -746,7 +750,7 @@ textarea.input {
     font-weight: 600;
 }
 
-/* contact @media css */
+/* Contact @media CSS */
 
 @media (max-width: 992px) {
     .contact-container {
@@ -815,17 +819,21 @@ textarea.input {
     }
 }
 
-/* footer css */
+/* Footer CSS */
 
 footer {
     background-color: rgb(61, 61, 61);
     color: #fff;
+    height: auto;
     padding: 50px 50px;
 }
 
+/* Google Widget CSS */
+
 .google-widget-wrapper {
-    height: 200px;
-    padding: auto clamp(20px, 5vw, 100px);
+    height: auto !important;
+    padding:auto clamp(20px, 5vw, 100px);
+    overflow: visible !important;
 }
 
 .grw-net-widget-carousel .grw-net-splide__track,
@@ -842,12 +850,19 @@ footer {
     cursor: grabbing !important;
 }
 
-.grw-net-widget-carousel .grw-net-text span{
+.grw-net-widget-carousel .grw-net-text span,
+.grw-net-widget-carousel .grw-net-comment-author {
     color: black !important;
 }
 
-.grw-net-widget-carousel .grw-net-text {
+.grw-net-widget-carousel-bottom * {
     color: white !important;
+}
+
+.grw-net-comment {
+    height: 100px !important; /* or whatever the default height should be */
+    overflow: hidden;
+    transition: height 0.3s;
 }
 
 .footer-link {
@@ -879,8 +894,6 @@ footer {
     color: white;
     font-size: clamp(25px, 2vw, 45px);
 }
-
-
 
 .website,
 .place,
@@ -921,7 +934,7 @@ footer hr {
     color: #5e5e5e;
 }
 
-/* footer @media css */
+/* Footer @media CSS */
 
 
 @media screen and (min-width: 992px) {
@@ -931,7 +944,7 @@ footer hr {
     }
 }
 
-/* other @media css */
+/* Other @media CSS */
 
 @media screen and (min-width:992px) {
     .about-image {
@@ -995,7 +1008,7 @@ footer hr {
     }
 }
 
-/* back to top css */
+/* Back to Top CSS */
 
 .back-to-top {
     font-family: "Fira Sans", sans-serif;

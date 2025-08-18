@@ -1,21 +1,21 @@
 // pop up function
 
-// function popUp() {
-//     let popUp = prompt(
-//         'This website requires the user to be at least 18 years old. Do you satisfy this requirement? (Please type Yes or No in the box provided)'
-//     );
+function popUp() {
+    let popUp = prompt(
+        'This website requires the user to be at least 18 years old. Do you satisfy this requirement? (Please type Yes or No in the box provided)'
+    );
 
-//     while (!popUp || (popUp.toLowerCase() !== 'yes' && popUp.toLowerCase() !== 'no')) {
-//         popUp = prompt('The response you entered is not valid. Please type either Yes or No.');
-//     }
+    while (!popUp || (popUp.toLowerCase() !== 'yes' && popUp.toLowerCase() !== 'no')) {
+        popUp = prompt('The response you entered is invalid. Please type either Yes or No.');
+    }
 
-//     if (popUp.toLowerCase() === 'no') {
-//         alert('You do not meet the age requirement to access this website.');
-//         location.reload();
-//     }
-// }
+    if (popUp.toLowerCase() === 'no') {
+        alert('You do not meet the age requirement to access this website.');
+        location.reload();
+    }
+}
 
-// popUp()
+popUp()
 
 // vue
 
@@ -26,14 +26,14 @@ const vue_app = Vue.createApp({
         };
     },
     created() {
-        fetch('products.json')
+        fetch('products.JSon')
             .then(response => response.json())
             .then(json => {
                 this.products = json;
             })
             .then(() => {
 
-                // Swiper js
+                // Swiper JS
                 this.$nextTick(() => {
                     new Swiper('.slider-wrapper', {
                         loop: true,
@@ -68,7 +68,7 @@ const vue_app = Vue.createApp({
 
 vue_app.mount("#vue_app");
 
-// header / navbar js
+// header / navbar JS
 
 let imgHeader = document.querySelector(".img-header");
 let height = parseInt(getComputedStyle(imgHeader).height, 10);
@@ -138,7 +138,7 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// contact js
+// contact JS
 
 const inputs = document.querySelectorAll(".input");
 
@@ -208,4 +208,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// gsap animations
+gsap.registerPlugin(ScrollTrigger);
 
+gsap.from('.about-row', {
+    y: 150,
+    duration: 1.5,
+    ease: 'power1.inOut',
+    opacity: 0,
+    scrollTrigger: ".about"
+});
+
+gsap.from(['.owner-title', '.owner-row'], {
+    y: 150,
+    duration: 1.5,
+    ease: 'power1.inOut',
+    opacity: 0,
+    scrollTrigger: ".owner"
+});
+
+gsap.from('.service-title', {
+    y: 150,
+    duration: 1.5,
+    ease: 'power1.inOut',
+    opacity: 0,
+    scrollTrigger: ".service"
+});
+
+gsap.from('.the-service', {
+    opacity: 0,
+    duration: 1.5,
+    delay: 1,
+    ease: 'power1.inOut',
+    stagger: 0.3,
+    scrollTrigger: ".service"
+});
+
+gsap.from('.service-img', {
+    duration: 1.5,
+    delay: 1,
+    ease: 'power1.inOut',
+    opacity: 0,
+    scrollTrigger: ".service"
+})
+
+gsap.from(['.product-title', '.card-swiper-container'], {
+    y: 150,
+    opacity: 0,
+    duration: 1.5,
+    ease: 'power1.inOut',
+    scrollTrigger: ".products"
+})
+
+gsap.from(['.contact-title', '.form'], {
+    y: 150,
+    opacity: 0,
+    duration: 1.5,
+    ease: 'power1.inOut',
+    scrollTrigger: ".contact"
+})
+
+// Google Widget JS
+
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("grw-net-comment-more-less")) {
+        // Collapse all comments first
+        document.querySelectorAll('.grw-net-comment').forEach(comment => {
+            comment.style.setProperty("height", "", "important");
+        });
+
+        // Find the closest comment container
+        let comment = event.target.closest(".grw-net-comment");
+        if (!comment) return;
+
+        // Expand only the clicked comment
+        if (event.target.textContent.toLowerCase().includes("more")) {
+            comment.style.setProperty("height", "auto", "important");
+        }
+    }
+});
